@@ -2,6 +2,7 @@ package com.stockexchange.service;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.stockexchange.model.stocks.Stock;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -13,7 +14,7 @@ import java.net.http.HttpResponse;
 @Service
 public class AlphaVantageService {
 
-    public String getPrice(String targetDate, String symbol) throws IOException, InterruptedException {
+    public Stock getPrice(String targetDate, String symbol) throws IOException, InterruptedException {
         String api_key = "QIJVEB27NEQRGFET";
         // String symbol = "PETR4.SA";
         HttpRequest request = HttpRequest.newBuilder()

@@ -1,5 +1,6 @@
 package com.stockexchange.controller;
 
+import com.stockexchange.model.stocks.Stock;
 import com.stockexchange.service.AlphaVantageService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -33,7 +34,7 @@ public class ApiController {
                     @ApiResponse(description = "Internal Error", responseCode = "500", content = {@Content})
             })
     @GetMapping("/price/{date}")
-    public ResponseEntity<String> getAll(@PathVariable(value = "date") String date, @RequestParam String symbol) throws IOException, InterruptedException {
+    public ResponseEntity<Stock> getAll(@PathVariable(value = "date") String date, @RequestParam String symbol) throws IOException, InterruptedException {
         return ResponseEntity.ok(service.getPrice(date, symbol));
     }
 
