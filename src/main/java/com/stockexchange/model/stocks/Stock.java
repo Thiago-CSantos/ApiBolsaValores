@@ -13,15 +13,15 @@ public class Stock {
     @Column(name = "Symbol")
     private String symbol;
     private String data;
-    private String abertura;
-    private String maxima;
-    private String minima;
-    private String fechamento;
-    private String volume;
+    private Double abertura;
+    private Double maxima;
+    private Double minima;
+    private Double fechamento;
+    private Double volume;
     @Column(name = "quantidade")
     private Integer quantidade;
 
-    public Stock(String symbol, String data, String abertura, String maxima, String minima, String fechamento, String volume, Integer quantidade) {
+    public Stock(String symbol, String data, Double abertura, Double maxima, Double minima, Double fechamento, Double volume, Integer quantidade) {
         this.symbol = symbol;
         this.data = data;
         this.abertura = abertura;
@@ -61,43 +61,43 @@ public class Stock {
         this.data = data;
     }
 
-    public String getAbertura() {
+    public Double getAbertura() {
         return abertura;
     }
 
-    public void setAbertura(String abertura) {
+    public void setAbertura(Double abertura) {
         this.abertura = abertura;
     }
 
-    public String getMaxima() {
+    public Double getMaxima() {
         return maxima;
     }
 
-    public void setMaxima(String maxima) {
+    public void setMaxima(Double maxima) {
         this.maxima = maxima;
     }
 
-    public String getMinima() {
+    public Double getMinima() {
         return minima;
     }
 
-    public void setMinima(String minima) {
+    public void setMinima(Double minima) {
         this.minima = minima;
     }
 
-    public String getFechamento() {
+    public Double getFechamento() {
         return fechamento;
     }
 
-    public void setFechamento(String fechamento) {
+    public void setFechamento(Double fechamento) {
         this.fechamento = fechamento;
     }
 
-    public String getVolume() {
+    public Double getVolume() {
         return volume;
     }
 
-    public void setVolume(String volume) {
+    public void setVolume(Double volume) {
         this.volume = volume;
     }
 

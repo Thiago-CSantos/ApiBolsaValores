@@ -34,11 +34,11 @@ public class AlphaVantageService {
         JsonObject targetDados = timeSeries.getAsJsonObject(targetDate);
 
         if (targetDados != null) {
-            String abertura = String.valueOf(targetDados.get("1. open"));
-            String maxima = String.valueOf(targetDados.get("2. high"));
-            String minima = String.valueOf(targetDados.get("3. low"));
-            String fechamento = String.valueOf(targetDados.get("4. close"));
-            String volume = String.valueOf(targetDados.get("5. volume"));
+            Double abertura = targetDados.get("1. open").getAsDouble();
+            Double maxima = targetDados.get("2. high").getAsDouble();
+            Double minima = targetDados.get("3. low").getAsDouble();
+            Double fechamento = targetDados.get("4. close").getAsDouble();
+            Double volume = targetDados.get("5. volume").getAsDouble();
 
             System.out.println("Symbol: " + symbol);
             System.out.println("Data: " + targetDate);
@@ -48,9 +48,10 @@ public class AlphaVantageService {
             System.out.println("Fechamento: " + targetDados.get("4. close"));
             System.out.println("Volume: " + targetDados.get("5. volume"));
 
-            return "Symbol:" + symbol + "\nAbertura: " + abertura + "\nmaxima:" + maxima + "\nminima:" + minima + "\nfechamento:" + fechamento + "\nvolume:" + volume;
+            return new Stock(symbol, targetDate, abertura, maxima, minima, fechamento, volume, 1);
         } else {
-            return "Dados não encontrados para a data: " + targetDate;
+            System.out.println("Dados não encontrados para a data: " + targetDate);
+            return null;
         }
     }
 

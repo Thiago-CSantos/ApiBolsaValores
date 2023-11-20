@@ -12,6 +12,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/v1/finance")
@@ -34,8 +36,10 @@ public class ApiController {
                     @ApiResponse(description = "Internal Error", responseCode = "500", content = {@Content})
             })
     @GetMapping("/price/{date}")
-    public ResponseEntity<Stock> getAll(@PathVariable(value = "date") String date, @RequestParam String symbol) throws IOException, InterruptedException {
-        return ResponseEntity.ok(service.getPrice(date, symbol));
+    public ResponseEntity<List<Stock>> getAll(@PathVariable(value = "date") String date, @RequestParam String symbol) throws IOException, InterruptedException {
+        List<Stock> listaStock = new ArrayList<>();
+        listaStock.add(service.getPrice(date, symbol));
+        return ResponseEntity.ok(listaStock);
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
