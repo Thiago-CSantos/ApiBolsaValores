@@ -20,6 +20,7 @@ public class ApiController {
     @Autowired
     private AlphaVantageService service;
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @Operation(summary = "Buscar ação pela 'Date' e 'Symbol'", description = " ", tags = {"getAll"},
             responses = {
                     @ApiResponse(description = "Sucesso", responseCode = "200",
@@ -36,6 +37,7 @@ public class ApiController {
         return ResponseEntity.ok(service.getPrice(date, symbol));
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @Operation(summary = "Buscar ação pela 'Date' e 'Symbol'", description = "Buscar o preço de fechamento da ação",
             tags = {"getByPriceClose"},
             responses = {
