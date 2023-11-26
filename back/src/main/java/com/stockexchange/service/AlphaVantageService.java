@@ -15,7 +15,7 @@ import java.net.http.HttpResponse;
 public class AlphaVantageService {
 
     public Stock getPrice(String targetDate, String symbol) throws IOException, InterruptedException {
-        String api_key = "QIJVEB27NEQRGFET";
+        String api_key = "X42P8DEFZMB33AAM"; // X42P8DEFZMB33AAM ou QIJVEB27NEQRGFET
         // String symbol = "PETR4.SA";
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
