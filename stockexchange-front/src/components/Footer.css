@@ -1,0 +1,71 @@
+footer {
+      padding-top: 5px;
+      bottom: 0;
+      width: 100%;
+      background-color: #262626;
+      text-align: center;
+      position: relative;
+}
+
+footer p img {
+      width: 30px;
+      height: 30px;
+}
+
+.email a {
+      color: aliceblue;
+}
+
+
+
+.divisao {
+      margin: 0 10%;
+      display: block;
+      border: 1px solid #CAFF33;
+}
+
+.i-email {
+      color: #CAFF33;
+}
+
+.i-tel {
+      padding-left: 10px;
+      color: #CAFF33;
+}
+
+.i-facebook {
+      color: #000000;
+
+}
+
+.i-linkedin {
+      color: #000000;
+}
+
+.i-instagram {
+      color: #000000;
+}
+
+.rodape {
+      font-family: 'Lexend', sans-serif;
+      font-size: 15px;
+      width: 100%;
+      border-radius: 87px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+}
+
+.bolinha {
+      float: left;
+      display: flex;
+      background-color: #CAFF33;
+      padding: 10px;
+      border-radius: 50%;
+      justify-content: center;
+      margin-left: 5px;
+}
+
+.ppts a {
+      color: #CAFF33;
+}

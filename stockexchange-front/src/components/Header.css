@@ -1,0 +1,82 @@
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #262626;
+  height: 65px;
+  padding: 20px 10px 10px 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px #ffffff solid;
+  border-radius: 50px;
+}
+
+header img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+
+header nav a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+header nav a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+.pesquisa {
+  display: flex;
+  align-items: center;
+}
+
+#input-date {
+  width: 60%;
+  height: 30px;
+  padding: 1px;
+  border: 1px solid #c9ff337a;
+  border-radius: 5px;
+}
+
+#input-symbol {
+  width: 100%;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 35px;
+  padding: 3px;
+  border: 1px solid #c9ff337a;
+  border-radius: 5px;
+}
+
+#input-symbol:focus{
+  outline: none;
+}
+
+.btnLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  background-color: #CAFF33;
+  color: #000000;
+  border: none;
+  border-radius: 82px;
+  cursor: pointer;
+}
+
+.btnLogin img:hover {
+  padding: 0 8px;
+}
+
+.btnLogin img {
+  padding: 0 10px;
+  margin: auto;
+}
