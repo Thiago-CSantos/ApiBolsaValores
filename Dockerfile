@@ -1,13 +1,14 @@
-FROM ubuntu:latest AS build
+FROM maven:3.8.4-openjdk-17 AS build
 
-RUN apt-get update
-RUN apt-get install openjdk-17-jdk -y
-COPY src .
+WORKDIR /app
 
-RUN apt-get install maven -y
+COPY . .
+
 RUN mvn clean install
 
 FROM openjdk:17-jdk-slim
+
+WORKDIR /app
 
 EXPOSE 8080
 
