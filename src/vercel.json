@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/main/java/AlphaVantageAPIExample.java",
+      "use": "@vercel/java"
+    }
+  ],
+  "routes": [
+    {
+      "src": "(.*)",
+      "dest": "AlphaVantageAPIExample.java"
+    }
+  ]
+}
